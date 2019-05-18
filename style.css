@@ -1,11 +1,17 @@
+/* Montserrat font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 body {
   margin: 0px;
   padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom right, #66D3FC, #68FFEB);
 }
 
+/* Navbar */
 nav {
   position: fixed;
-  background-color: green;
+  background-color: white;
   height: 60px;
   width: 100vw;
   box-sizing: border-box;
@@ -30,14 +36,54 @@ nav {
 }
 
 .nav-link-a {
+  font-weight: bold;
+  font-size: 1.2em;
   display: flex;
   align-items: center;
   height: 60px;
   box-sizing: border-box;
-  padding: 0px 50px;
-  background-color: blue;
+  padding: 0px 40px;
+  background-color: white;
   text-decoration: none;
-  color: white;
+  color: #66D3FC;
   clip-path: polygon(30px 0px, 100% 0px, calc(100% - 30px) 100%, 0 100%);
   margin-left: -30px;
+  transition: 0.1s ease-in;
+}
+
+.nav-link-a:hover, .nav-link-active {
+  color: white;
+  background-color: #942492;
+}
+
+/* Section 1 */
+#about > div {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 1080px;
+  margin: 0 auto;
+}
+
+#abt-txt-div {
+  display: inline;
+  width: 50%;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+
+#abt-txt-div > h2 {
+  font-size: 2.1em;
+  color: #4f5ba3;
+}
+
+#abt-txt-div > p {
+  font-size: 1.2em;
+  width: 80%;
+  color: #942492
+}
+
+#about img {
+  width: 50%;
+  box-sizing: border-box;
 }
