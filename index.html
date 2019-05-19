@@ -12,8 +12,8 @@
   <nav>
       <img id="header-logo" src="assets/logo.png"></img>
       <ul id="nav-links">
-        <li class="nav-link"><a href="#about" class="nav-link-a nav-link-active">About</a></li>
-        <li class="nav-link"><a href="#projects" class="nav-link-a">Projects</a></li>
+        <li class="nav-link"><a id="about-nav" href="#about" class="nav-link-a nav-link-active">About</a></li>
+        <li class="nav-link"><a id="projects-nav" href="#projects" class="nav-link-a">Projects</a></li>
         <li class="nav-link"><a href="#register" class="nav-link-a">Registration</a></li>
       </ul>
   </nav>
@@ -28,11 +28,105 @@
     </div>
 
     <div class="section" data-anchor="projects">
-      <h2>Projects</h2>
-    </div>
+      <div class="slide">
+        <div class="slide-child">
+          <div id="gears-container">
+            <img src="assets/gear1.png" id="gear1" />
+            <img src="assets/gear1.png" id="gear2" />
+            <img src="assets/gear1.png" id="gear3" />
+          </div>
+          <div id="projects-1" class="projects">
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et obcaecati aperiam eos quia, laudantium magni quam culpa! Perferendis, reiciendis hic laboriosam numquam quidem quis consectetur praesentium sunt corporis magnam repellat!
+              </p>
+            </div>
 
-    <div class="section" data-anchor="register">
-      <h2>Register</h2>
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-child">
+          <div id="projects-2" class="projects">
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et obcaecati aperiam eos quia, laudantium magni quam culpa! Perferendis, reiciendis hic laboriosam numquam quidem quis consectetur praesentium sunt corporis magnam repellat!
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et obcaecati aperiam eos quia, laudantium magni quam culpa! Perferendis, reiciendis hic laboriosam numquam quidem quis consectetur praesentium sunt corporis magnam repellat!
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Card Title</p>
+              <p class="card-description">
+                Card card-description. Card card-description. Card card-description. Card card-description. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="fullpage.js"></script>
@@ -42,6 +136,22 @@
       autoScrolling:true,
       scrollHorizontally: true
     });
+
+    function navUpdate() {
+      document.getElementById('nav-links').childNodes.forEach(c => {
+        if (c.tagName === 'LI') {
+          console.log(`#${c.childNodes[0].id}`, `${window.location.hash}-nav`, `#${c.childNodes[0].id}-nav` === `${window.location.hash}-nav`)
+          if(`#${c.childNodes[0].id}` === `${window.location.hash}-nav`) {
+            c.childNodes[0].classList.add('nav-link-active');
+          } else {
+            c.childNodes[0].classList.remove('nav-link-active');
+          }
+        }
+      })
+    }
+    window.onload = navUpdate
+    window.onhashchange = navUpdate
+
   </script>
 </body>
 </html>

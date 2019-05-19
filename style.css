@@ -5,7 +5,6 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to bottom right, #66D3FC, #68FFEB);
 }
 
 /* Navbar */
@@ -46,8 +45,8 @@ nav {
   background-color: white;
   text-decoration: none;
   color: #66D3FC;
-  clip-path: polygon(30px 0px, 100% 0px, calc(100% - 30px) 100%, 0 100%);
-  margin-left: -30px;
+  clip-path: polygon(20px 0px, 100% 0px, calc(100% - 20px) 100%, 0 100%);
+  margin-left: -20px;
   transition: 0.1s ease-in;
 }
 
@@ -57,6 +56,10 @@ nav {
 }
 
 /* Section 1 */
+#about {
+  background: linear-gradient(to bottom right, #66D3FC, #68FFEB);
+}
+
 #about > div {
   display: flex;
   flex-flow: row;
@@ -86,4 +89,129 @@ nav {
 #about img {
   width: 50%;
   box-sizing: border-box;
+}
+
+/* slide arrows */
+.fp-controlArrow {
+  border-color: #942492!important;
+  margin-top: -20.5px!important;
+  transition: 0.1s ease-in;
+}
+
+.fp-controlArrow:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.fp-prev {
+  clip-path: polygon(65% 0, 100% 0, 35% 50%, 100% 100%, 65% 100%, 0 50%);
+  border-width: 20.5px 24px 20.5px 0!important;
+}
+
+.fp-next {
+  clip-path: polygon(0 0, 35% 0, 100% 50%, 35% 100%, 0 100%, 65% 50%);
+  border-width: 20.5px 0 20.5px 24px!important;
+}
+
+
+
+/* Slide elements */
+.slide-child {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 1080px;
+  margin: 0 auto;
+}
+
+/* Projects slide 1 */
+#gears-container {
+  width: 400px;
+  height: 400px;
+  width: border-box;
+  position: relative;
+
+  /* overflow: hidden; */
+}
+
+#gears-container > img {
+  position: absolute;
+}
+
+#gear1 {
+  width: 225px;
+  top: 50px;
+  left: 50px;
+  animation: clockwise 6s infinite linear;
+}
+
+#gear2 {
+  width: 150px;
+  top:170px;
+  left: 220px;
+  animation: clockwise 4s infinite linear reverse;
+}
+
+#gear3 {
+  width: 30%;
+  top: 240px;
+  left: 140px;
+  animation: clockwise 2s infinite linear;
+}
+
+@keyframes clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#projects-1 {
+  width: calc(100% - 400px);
+  padding-left: 30px;
+}
+
+/* Projects card container */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.card {
+  width: 40%;
+  box-sizing: border-box;
+  display: block;
+  background-color: #66D3FC;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #4f5ba3;
+  font-weight: bold;
+  transition: 0.1s ease-in;
+}
+
+.card:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  margin: 0px 0px 10px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 1em;
+  line-height: 1.2em;
+  height: 6em;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+#projects-2 > .card {
+  width: 22%;
 }
