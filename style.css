@@ -81,7 +81,7 @@ nav {
 }
 
 #abt-txt-div > h2 {
-  font-size: 2.1em;
+  font-size: 2.4em;
   color: #4f5ba3;
 }
 
@@ -288,5 +288,38 @@ nav {
   #mobile-menu-button {
     display: initial;
   }
+
+  nav {
+    padding: 0px 20px;
+  }
   
+  /* Section 1 */
+  #about {
+    position: initial;
+  }
+
+  #about > div {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap-reverse;
+    align-items: initial;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    height: max-content!important;
+    margin-top: 60px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  #abt-txt-div {
+    width: 100%;
+  }
+
+  #abt-txt-div p, #abt-txt-div h2 {
+    width: 100%;
+  }
+
+  #about img {
+    width: 100%;
+  }
 }
