@@ -1,6 +1,11 @@
 /* Montserrat font */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -214,4 +219,74 @@ nav {
 
 #projects-2 > .card {
   width: 22%;
+}
+
+/* Responsive Menu */
+#mobile-menu-button {
+  display: none;
+  text-align: center;
+  font-size: 40px!important;
+  color: #66D3FC;
+}
+
+#mobile-menu-button:hover {
+  cursor: pointer;
+}
+
+#mobile-menu-container {
+  position: fixed;
+  top: 60px;
+  z-index: 100;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100vw;
+  height: 0px;
+  transition: 0.15s ease-in;
+  overflow: hidden;
+}
+
+.visible {
+  height: 204px!important;
+}
+
+#mobile-menu-shadow {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -1;
+  transition: 0.1s ease-in;
+}
+
+.shadow-visible {
+  background-color: rgba(0, 0, 0, 0.8)!important;
+  z-index: 50!important;
+}
+
+#mobile-menu-container > a {
+  display: block;
+  padding: 20px 60px;
+  font-size: 1.4em;
+  color: #66D3FC;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.1s ease-in;
+}
+
+#mobile-menu-container > a:hover {
+  background-color: #942492;
+  color: white;
+}
+
+@media screen and (max-width: 832px) {
+  #nav-links {
+    display: none;
+  }
+
+  #mobile-menu-button {
+    display: initial;
+  }
+  
 }

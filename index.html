@@ -7,16 +7,26 @@
   <title>Summer of Learning with IIITV Coding Club</title>
   <link rel="stylesheet" href="fullpage.css">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
   <nav>
-      <img id="header-logo" src="assets/logo.png"></img>
-      <ul id="nav-links">
-        <li class="nav-link"><a id="about-nav" href="#about" class="nav-link-a nav-link-active">About</a></li>
-        <li class="nav-link"><a id="projects-nav" href="#projects" class="nav-link-a">Projects</a></li>
-        <li class="nav-link"><a href="https://forms.gle/nSBoV3TZUkzX7BcXA" target="_blank" class="nav-link-a">Registration</a></li>
-      </ul>
+    <img id="header-logo" src="assets/logo.png"></img>
+    <ul id="nav-links">
+      <li class="nav-link"><a id="about-nav" href="#about" class="nav-link-a">About</a></li>
+      <li class="nav-link"><a id="projects-nav" href="#projects" class="nav-link-a">Projects</a></li>
+      <li class="nav-link"><a href="https://forms.gle/nSBoV3TZUkzX7BcXA" target="_blank" class="nav-link-a">Registration</a></li>
+    </ul>
+    <i onclick="toggleMenu()" id="mobile-menu-button" class="material-icons">menu</i>
   </nav>
+  <div id="mobile-menu-container">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="https://forms.gle/nSBoV3TZUkzX7BcXA" target="_blank">Registration</a>
+  </div>
+  <div id="mobile-menu-shadow" onclick="toggleMenu()"></div>
+
   <div id="fullpage">
     <div id="about" data-anchor="about" class="section active">
       <div id="abt-txt-div">
@@ -141,7 +151,6 @@
       window.location.hash
         ? document.getElementById('nav-links').childNodes.forEach(c => {
           if (c.tagName === 'LI') {
-            console.log(`#${c.childNodes[0].id}`, `${window.location.hash}-nav`, `#${c.childNodes[0].id}-nav` === `${window.location.hash}-nav`)
             if(`#${c.childNodes[0].id}` === `${window.location.hash}-nav`) {
               c.childNodes[0].classList.add('nav-link-active');
             } else {
@@ -153,6 +162,11 @@
     }
     window.onload = navUpdate
     window.onhashchange = navUpdate
+
+    function toggleMenu() {
+      document.getElementById('mobile-menu-container').classList.toggle('visible')
+      document.getElementById('mobile-menu-shadow').classList.toggle('shadow-visible')
+    }
 
   </script>
 </body>
