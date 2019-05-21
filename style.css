@@ -286,6 +286,18 @@ nav {
     width: 100%;
     justify-content: center;
   }
+
+  #about > div {
+    width: 95%;
+  }
+
+  #abt-txt-div > h2 {
+    font-size: 2em;
+  }
+  
+  #abt-txt-div > p {
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (max-width: 832px) {
