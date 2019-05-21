@@ -183,6 +183,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
+  justify-content: center;
 }
 
 .card {
@@ -278,6 +279,13 @@ nav {
 #mobile-menu-container > a:hover {
   background-color: #942492;
   color: white;
+}
+
+@media screen and (max-width: 1110px) {
+  .slide-child {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 832px) {
