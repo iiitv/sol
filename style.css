@@ -303,6 +303,7 @@ nav {
     flex-flow: row;
     flex-wrap: wrap-reverse;
     align-items: initial;
+    justify-content: center;
     width: calc(100% - 20px);
     margin: 0 auto;
     height: max-content!important;
@@ -321,5 +322,24 @@ nav {
 
   #about img {
     width: 100%;
+    max-width: 400px;
+  }
+
+  .slide-child {
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #projects-1, #projects-2 {
+    width: 100%;
+    padding: 0px;
+    justify-content: center;
+  }
+
+  #projects-2 > .card {
+    width: 40%;
+    box-sizing: border-box;
   }
 }
