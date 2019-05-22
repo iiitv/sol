@@ -134,34 +134,66 @@ nav {
   height: 400px;
   width: border-box;
   position: relative;
-
-  /* overflow: hidden; */
 }
 
-#gears-container > img {
+#gears-container > div {
   position: absolute;
 }
 
+#gearbox-1 {
+  top:5%;
+  left:0;
+  width: 65%;
+  height: 65%;
+}
+
+#gearbox-2 {
+  top:40%;
+  left:50%;
+  width: 50%;
+  height: 50%;
+}
+
+#gearbox-3 {
+  top:65%;
+  left:25%;
+  width: 30%;
+  height: 30%;
+}
+
+#pipe1, #pipe2, #pipe3 {
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#gear1, #gear2, #gear3 {
+  width: 100%;
+}
+
 #gear1 {
-  width: 225px;
-  top: 50px;
-  left: 50px;
   animation: clockwise 6s infinite linear;
 }
 
 #gear2 {
-  width: 150px;
-  top:170px;
-  left: 220px;
-  animation: clockwise 4s infinite linear reverse;
+  animation: clockwise 4.5s infinite linear reverse;
 }
 
 #gear3 {
-  width: 30%;
-  top: 240px;
-  left: 140px;
-  animation: clockwise 2s infinite linear;
+  animation: clockwise 3s infinite linear;
 }
+
+#gearbox-1 > img, #gearbox-2 > img, #gearbox-3 > img {
+  position: absolute;
+}
+
+/* #gear1 {
+  width: 225px;
+  top: 50px;
+  left: 50px;
+  animation: clockwise 6s infinite linear;
+} */
 
 @keyframes clockwise {
   from {
@@ -368,5 +400,11 @@ nav {
 @media screen and (max-width: 460px) {
   .card, #projects-2 > .card {
     width: 100%;
+  }
+
+  #gears-container {
+    margin-top: 30px;
+    width: 80vw;
+    height: 80vw;
   }
 }
