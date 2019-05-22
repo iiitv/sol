@@ -343,6 +343,7 @@ nav {
   #about img {
     width: 100%;
     max-width: 400px;
+    height: 100%;
   }
 
   .slide-child {
