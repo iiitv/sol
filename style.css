@@ -130,6 +130,8 @@ nav {
 
 /* Projects slide 1 */
 #gears-container {
+  background: url('assets/gears-bg.png') no-repeat center;
+  background-size: 100% 100%;
   width: 400px;
   height: 400px;
   width: border-box;
@@ -143,22 +145,22 @@ nav {
 #gearbox-1 {
   top:5%;
   left:0;
-  width: 65%;
-  height: 65%;
+  width: 55%;
+  height: 55%;
 }
 
 #gearbox-2 {
   top:40%;
   left:50%;
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
 }
 
 #gearbox-3 {
-  top:65%;
+  top:60%;
   left:25%;
-  width: 30%;
-  height: 30%;
+  width: 25%;
+  height: 25%;
 }
 
 #pipe1, #pipe2, #pipe3 {
@@ -173,15 +175,15 @@ nav {
 }
 
 #gear1 {
-  animation: clockwise 6s infinite linear;
+  animation: clockwise 5s infinite linear;
 }
 
 #gear2 {
-  animation: clockwise 4.5s infinite linear reverse;
+  animation: clockwise 4s infinite linear reverse;
 }
 
 #gear3 {
-  animation: clockwise 3s infinite linear;
+  animation: clockwise 2.5s infinite linear;
 }
 
 #gearbox-1 > img, #gearbox-2 > img, #gearbox-3 > img {
