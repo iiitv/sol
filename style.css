@@ -208,7 +208,7 @@ nav {
 }
 
 #projects-1 {
-  width: calc(100% - 400px);
+  width: 600px;
   padding-left: 30px;
 }
 
@@ -225,13 +225,14 @@ nav {
   box-sizing: border-box;
   display: block;
   background-color: #66D3FC;
-  margin: 15px;
-  padding: 20px;
+  margin: 10px;
+  padding: 15px 20px;
   border-radius: 15px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   color: #4f5ba3;
   font-weight: bold;
   transition: 0.1s ease-in;
+  text-decoration: none;
 }
 
 .card:hover {
@@ -239,21 +240,23 @@ nav {
 }
 
 .card-title {
-  margin: 0px 0px 10px;
-  font-size: 1.8em;
+  font-size: 1.4em;
   text-align: center;
+  height: 2.8em;
+  margin: 0px;
 }
 
 .card-description {
   font-size: 1em;
   line-height: 1.2em;
-  height: 6em;
-  margin-bottom: 15px;
+  max-height: 7.2em;
+  margin-bottom: 5px;
+  margin-top: 2px;
   overflow: hidden;
 }
 
 #projects-2 > .card {
-  width: 22%;
+  width: 30%;
 }
 
 /* Responsive Menu */
