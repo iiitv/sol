@@ -340,6 +340,53 @@ nav {
   color: white;
 }
 
+footer {
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+  color: #942492;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+footer > #love-icon {
+  color: red;
+  animation: 1.25s heartbeat infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  55% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  85% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+footer > a {
+  text-decoration: none;
+  color: #4f5ba3;
+  display: inline-block;
+  border-bottom: 1px dotted #4f5ba3;
+}
+
 @media screen and (max-width: 1110px) {
   .slide-child {
     width: 100%;
@@ -421,6 +468,12 @@ nav {
   #projects-2 > .card {
     width: 40%;
     box-sizing: border-box;
+  }
+
+  footer {
+    position: initial!important;
+    transform: none;
+    margin: 20px;
   }
 }
 
