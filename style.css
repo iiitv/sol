@@ -267,6 +267,10 @@ nav {
   height: 2.8em;
   margin: 0px;
 }
+/* to avoid overlapp with heading*/
+.head-height{
+  height: 4rem;
+}
 
 .card-description {
   font-size: 1em;
