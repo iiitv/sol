@@ -55,7 +55,7 @@ nav {
   transition: 0.1s ease-in;
 }
 
-.nav-link-a:hover, .nav-link-active {
+.nav-link-a:hover, .nav-link-active, #mobile-menu-container .nav-link-active, #mobile-menu-container a:hover {
   color: white;
   background-color: #942492;
 }
