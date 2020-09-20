@@ -24,7 +24,6 @@ function navUpdate() {
          if(`#${c.id}` === `${window.location.hash}-nav-mobile`) {
            c.classList.add('nav-link-active');
          } else {
-           console.log(`${c.id}, ${window.location.hash} i am in else section `)
            c.classList.remove('nav-link-active');
          }
        }
