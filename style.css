@@ -345,14 +345,11 @@ nav {
 }
 
 footer {
+  margin: auto;
+  margin-top:20px;
   text-align: center;
-  margin: 10px;
   font-weight: bold;
   color: #942492;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
 }
 
 footer > #love-icon {
