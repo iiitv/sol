@@ -1,10 +1,10 @@
 new fullpage('#fullpage', {
   //options here
   autoScrolling:true,
-  responsiveWidth: 832,
 });
 
 function navUpdate() {
+  //to update navbar in desktop/tab view
   window.location.hash
     ? document.getElementById('nav-links').childNodes.forEach(c => {
       if (c.tagName === 'LI') {
@@ -16,6 +16,19 @@ function navUpdate() {
       }
     })
     : document.getElementById('about-nav').classList.add('nav-link-active')
+
+     //to update navbar in mobile view
+     window.location.hash
+     ? document.getElementById('mobile-menu-container').childNodes.forEach(c => {
+       if (c.tagName === 'A') {
+         if(`#${c.id}` === `${window.location.hash}-nav-mobile`) {
+           c.classList.add('nav-link-active');
+         } else {
+           c.classList.remove('nav-link-active');
+         }
+       }
+     })
+     : document.getElementById('about-nav-mobile').classList.add('nav-link-active')
 }
 window.onload = navUpdate
 window.onhashchange = navUpdate
